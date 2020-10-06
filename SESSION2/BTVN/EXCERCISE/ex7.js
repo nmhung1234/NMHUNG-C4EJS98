@@ -1,5 +1,5 @@
 // ex 7: unsatisfied
-    let row7 = Number(prompt("Enter Rows: "));
+    let row7 = Number(prompt("Enter Rows7: "));
     let column7 = Number(prompt("Enter column7: "));
     let array7 = new Array (column7);
 
