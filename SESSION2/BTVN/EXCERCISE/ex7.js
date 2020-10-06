@@ -6,12 +6,12 @@ let string7 = "";
 let add = "*";
 for (let i = 0; i < row7; i++)
 {
-    for(let j = 0; j< column7; j++)
+    for(let j = 0; j < column7; j++)
     {
-        string7 += add; 
+        string7 += add;
     }
-    console.log(string7);
-    string7 = "";
+    string7 += "\n";
 }
+console.log(string7);
 
 
