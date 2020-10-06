@@ -1,0 +1,13 @@
+Array
+
+
+.push(newitem) ----> chèn thêm vào cuối array.
+.splice(start at: position, number element del) ----> xóa từ vị trí position, number phần tử;
+.pop() ----> xóa phần tử cuối mảng
+.shift ----> thêm phần tử đầu mảng
+.unshift ----> xóa phần tử cuối mảng
+
+cách tạo 1 bản sao cảu 1 mảng: 
+
+var shallowCopy = fruits.slice(); // đây là cách để tạo một bản sao
+// ["Strawberry"]
