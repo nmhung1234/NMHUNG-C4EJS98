@@ -50,8 +50,6 @@
 //     count = 0;  
 // }
 
-// console.log('===============')
-
 
 
 // //ex4 dãy fibonacci
