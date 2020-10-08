@@ -7,7 +7,12 @@ Array
 .shift ----> thêm phần tử đầu mảng
 .unshift ----> xóa phần tử cuối mảng
 
-cách tạo 1 bản sao cảu 1 mảng: 
+cách tạo 1 bản sao của 1 mảng: 
 
 var shallowCopy = fruits.slice(); // đây là cách để tạo một bản sao
 // ["Strawberry"]
+
+cách cắt thành nhiều phần tử khi đầu vào nhiều tham số ở prompt
+let numInput = prompt("Enter your Number:");
+let cutarr = numInput.split(',');
+ => có mảng cutarr đã được tạo từ nhiều thành phần đầu vào và được cắt bởi mỗi dấu phẩy
