@@ -160,45 +160,37 @@
 
 
 // ex 8:
-// let SheepSizes = [5, 7, 300, 90, 24, 50, 75];
-// let maxSheep = SheepSizes[0];
-// const defaultSize = 8
-// console.log("Hello, my name is Phuong nam and here is my sheep sizes:");
-// for(let i = 0; i < SheepSizes.length; i++)
-// {
-//     if(SheepSizes[i] >= maxSheep)
-//     {
-//         maxSheep = SheepSizes[i];
-//     }
-// }
-// console.log(`${[...SheepSizes]}`);
-// console.log('\n');
+let SheepSizes = [5, 7, 300, 90, 24, 50, 75];
+let maxSheep = Math.max(...SheepSizes);
+const defaultSize = 8;
+console.log("Hello, my name is Phuong nam and here is my sheep sizes:");
+console.log(`${[...SheepSizes]}`);
+console.log('\n');
 
-// console.log(`Now my biggest sheep has size ${maxSheep}, let's shave it`);
+console.log(`Now my biggest sheep has size ${maxSheep}, let's shave it`);
 
-// let resetSize = SheepSizes.indexOf(maxSheep);
-// SheepSizes[resetSize] = defaultSize;
+let resetSize = SheepSizes.indexOf(maxSheep);
+SheepSizes[resetSize] = defaultSize;
 
-// console.log("After shearing, here is my flock");
-// console.log(`${[...SheepSizes]}`);
-// console.log('\n');
+console.log("After shearing, here is my flock");
+console.log(`${[...SheepSizes]}`);
+console.log('\n');
 
-// for(let i = 0; i< 5; i++)
-// {
-//     console.log(`Month ${i+1}`);
-//     console.log('One month has, passsed, my sheeps have grown, here are there sizes');
-//     for(let j = 0; j< SheepSizes.length; j++)
-//     {
-//         SheepSizes[j] += 50;
-//     }
-//     console.log(`${[...SheepSizes]}`);
-//     console.log('\n');
-// }
-// let sum = 0;
-// for(let  i = 0; i < SheepSizes.length; i++)
-//     sum += SheepSizes[i];
-// console.log(`My flock has size in total: ${sum}`);
-// console.log(`I would get ${sum} *2$ = ${sum*2}`)
+for(let i = 0; i< 5; i++)
+{
+    console.log(`Month ${i+1}`);
+    console.log('One month has, passsed, my sheeps have grown, here are there sizes');
+    for(let j = 0; j< SheepSizes.length; j++)
+    {
+        SheepSizes[j] += 50;
+    }
+    console.log(`${[...SheepSizes]}`);
+    console.log('\n');
+}
+let sum = 0;
+SheepSizes.forEach(value => sum += value)
+console.log(`My flock has size in total: ${sum}`);
+console.log(`I would get ${sum} *2$ = ${sum*2}`)
 
 
 
