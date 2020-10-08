@@ -51,65 +51,65 @@
 
 // ex4 ---- I dont know why my 'd' is disconnect
 
-    let items = ['Jeans', 'T-Shirt', 'Socks'];
-    let input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-    do {
-        if (input == 'c' || input == 'r' || input == 'u' || input == 'd')
-        {
-            switch (input) {
-                case 'r':
-                    {
-                        console.log("The current items are:");
-                        for (let i = 0; i < items.length; i++) {
-                            console.log(`${i + 1}. ${items[i]}`);
-                        }
-                        input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-                        break;
-                    }
-                case 'c':
-                    {
-                        let add = String(prompt("Enter the name of the item"));
-                        alert("Done");
-                        items.push(add);
-                        input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-                        break;
-                    }
-                case 'u':
-                    {
-                        let positionUpdate = Number(prompt("Enter your position you want to update"));
-                        let valueUpdate = String(prompt("Enter the name"));
-                        alert("Done");
-                        items[positionUpdate -1] = valueUpdate;
-                        input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-                        break;
-                    }
-                case 'd':
-                    {
-                        //cắt ra làm 2 phần k chứa phần từ cẩn xóa. Đẩy 2 phần đấy vào mảng temp. rồi gán tại temp bằng items ban đầu để loại bỏ phần tử cần xóa
-                        let poDel = Number(prompt("Enter the position you wan to delete"));
-                        alert("Done");
-                        let tempitems = items;
-                        for (let j = 0; j < poDel; j++) {
-                            tempitems.push(items[j]);
-                        }
-                        for (let j = poDel + 1; j < items.length; j++) {
-                            tempitems.push(items[j]);
-                        }
-                        items = [""];
-                        for (let j = 0; j < tempitems.length; j++) {
-                            items.push(tempitems[j]);
-                        }
-                        input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-                        break;
-                    }
-            }
+    // let items = ['Jeans', 'T-Shirt', 'Socks'];
+    // let input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    // do {
+    //     if (input == 'c' || input == 'r' || input == 'u' || input == 'd')
+    //     {
+    //         switch (input) {
+    //             case 'r':
+    //                 {
+    //                     console.log("The current items are:");
+    //                     for (let i = 0; i < items.length; i++) {
+    //                         console.log(`${i + 1}. ${items[i]}`);
+    //                     }
+    //                     input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    //                     break;
+    //                 }
+    //             case 'c':
+    //                 {
+    //                     let add = String(prompt("Enter the name of the item"));
+    //                     alert("Done");
+    //                     items.push(add);
+    //                     input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    //                     break;
+    //                 }
+    //             case 'u':
+    //                 {
+    //                     let positionUpdate = Number(prompt("Enter your position you want to update"));
+    //                     let valueUpdate = String(prompt("Enter the name"));
+    //                     alert("Done");
+    //                     items[positionUpdate -1] = valueUpdate;
+    //                     input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    //                     break;
+    //                 }
+    //             case 'd':
+    //                 {
+    //                     //cắt ra làm 2 phần k chứa phần từ cẩn xóa. Đẩy 2 phần đấy vào mảng temp. rồi gán tại temp bằng items ban đầu để loại bỏ phần tử cần xóa
+    //                     let poDel = Number(prompt("Enter the position you wan to delete"));
+    //                     alert("Done");
+    //                     let tempitems = items;
+    //                     for (let j = 0; j < poDel; j++) {
+    //                         tempitems.push(items[j]);
+    //                     }
+    //                     for (let j = poDel + 1; j < items.length; j++) {
+    //                         tempitems.push(items[j]);
+    //                     }
+    //                     items = [""];
+    //                     for (let j = 0; j < tempitems.length; j++) {
+    //                         items.push(tempitems[j]);
+    //                     }
+    //                     input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    //                     break;
+    //                 }
+    //         }
 
-        } else {
-            alert("This command is not supported");
-            break;
-        }
+    //     } else {
+    //         alert("This command is not supported");
+    //         break;
+    //     }
 
-    } while (input)
+    // } while (input)
 
 
 
@@ -156,6 +156,50 @@
 //     {
 //             alert(`${luckyNum} is not FOUND in array`);
 //     }
+
+
+
+// ex 8:
+// let SheepSizes = [5, 7, 300, 90, 24, 50, 75];
+// let maxSheep = SheepSizes[0];
+// const defaultSize = 8
+// console.log("Hello, my name is Phuong nam and here is my sheep sizes:");
+// for(let i = 0; i < SheepSizes.length; i++)
+// {
+//     if(SheepSizes[i] >= maxSheep)
+//     {
+//         maxSheep = SheepSizes[i];
+//     }
+// }
+// console.log(`${[...SheepSizes]}`);
+// console.log('\n');
+
+// console.log(`Now my biggest sheep has size ${maxSheep}, let's shave it`);
+
+// let resetSize = SheepSizes.indexOf(maxSheep);
+// SheepSizes[resetSize] = defaultSize;
+
+// console.log("After shearing, here is my flock");
+// console.log(`${[...SheepSizes]}`);
+// console.log('\n');
+
+// for(let i = 0; i< 5; i++)
+// {
+//     console.log(`Month ${i+1}`);
+//     console.log('One month has, passsed, my sheeps have grown, here are there sizes');
+//     for(let j = 0; j< SheepSizes.length; j++)
+//     {
+//         SheepSizes[j] += 50;
+//     }
+//     console.log(`${[...SheepSizes]}`);
+//     console.log('\n');
+// }
+// let sum = 0;
+// for(let  i = 0; i < SheepSizes.length; i++)
+//     sum += SheepSizes[i];
+// console.log(`My flock has size in total: ${sum}`);
+// console.log(`I would get ${sum} *2$ = ${sum*2}`)
+
 
 
 
