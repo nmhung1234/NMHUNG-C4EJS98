@@ -1,3 +1,5 @@
+//ex 1
+
 // let a = 5;
 // let b = 6;
 // console.log(a,b)
@@ -39,9 +41,12 @@
 
 // console.log(arr);
 
+
+
 //ex3
 //  const a = [4,5,7,-8];
 //  console.log(...a);
+
 
 
 // ex4 ---- I dont know why my 'd' is disconnect
@@ -133,6 +138,7 @@
 //     alert(`The smallest numbe is ${min}`);
 
 
+
 //ex7
 // const arr = [10, 20, 31, 55, 90, 87,52];
 // let luckyNum = Number(prompt("Enter your number:"));
@@ -157,8 +163,36 @@
 // https://turtle-js.herokuapp.com/?turtle=v4lcJMMxgg
 
 
-let userInput = prompt("Enter the sequensec of names:");
-let cutarr = userInput.split(',');
+
+
+// ex 10: dont like 100% hmmmmmmm
+
+// let userInput = prompt("Enter the sequensec of names:");
+// let cutarr = userInput.split(',');
+// let cutarrNew = [];
+// for(let i = 0; i < cutarr.length; i++)
+// {
+//     cutarrNew.push(`<${cutarr[i]}>`);
+// }
+// alert(`${[...cutarr]} => ${[...cutarrNew]}`);
  
+
+
+
+
+// ex 11
+
+// let userInput = prompt("Enter the sequensec numbers:");
+// let cutarr = userInput.split(',');
+// let odd = [];
+// for(let i = 0; i< cutarr.length; i++)
+// {
+//     if(cutarr[i] % 2 != 0)
+//     {
+//         odd.push(cutarr[i]);
+//     }
+// }
+
+// alert(`${[...cutarr]} => ${[...odd]}`);
 
 
