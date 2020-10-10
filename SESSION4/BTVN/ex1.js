@@ -9,3 +9,7 @@ let product = {
     }
 
 //  x is property
+
+
+// ex 2
+

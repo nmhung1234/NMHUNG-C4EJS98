@@ -8,7 +8,7 @@ let phoneList = [
         phone: "0377127592",
     }
 ];
-let contact = {};
+
 let action;
 let control = ['c', 'r', 'u', 'd', 'e'];
 do{
@@ -50,6 +50,7 @@ function logout() {
         console.log(people.name, people.phone);
 }
 function add() {
+    let contact = {};
     let name = String(prompt("Enter the name"));
     let phonenumber = String(prompt('Enter the phone number'));
     contact['name'] = name;
@@ -58,11 +59,10 @@ function add() {
 }
 function updateP() {
     let updateInf = prompt("Enter your name you want to update");
-    let newName = String(prompt("Enter your new name you want to update"));
-    let newNumber = Number(prompt("Enter your number name you want to update"));
     for (let i = 0; i < phoneList.length; i++) {
-        if (phoneList[i].name == updateInf) {
-            phoneList[i].name = newName;
+        if (phoneList[i].name == updateInf) 
+        {
+            let newNumber = Number(prompt("Enter your number name you want to update"));
             phoneList[i].phone = newNumber;
         }
         else 
