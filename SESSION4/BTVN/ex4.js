@@ -1,4 +1,4 @@
-// 4.1
+// ex4
 let dictionary = [
     {
         keyword: 'debugger',
@@ -21,5 +21,30 @@ let dictionary = [
         explanation: 'UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels',
     }
 ]
-alert('HI there, this is dev dictionary');
-let keyword = String(prompt('Enter yout keyword'));
+// 4.1 + 4.2
+let keyword;
+let count = 0;
+do {
+    alert('Hi there, this is dev dictionary');
+    keyword = String(prompt('Enter your keyword'));
+
+    for (let keyw of dictionary) {
+        if (keyword == keyw.keyword) {
+            alert(`${keyword} \n${keyw.explanation}`);
+            break;
+        }
+        count++;
+    }
+    if (count == dictionary.length && keyword != '') {
+        let expla = String(prompt(`We could not find your word: ${keyword}, leave your explanation`));
+        alert('Done');
+        let dic = {};
+        dic['keyword'] = keyword;
+        dic['explanation'] = expla;
+        dictionary.push(dic);
+        alert(`${keyword} \n${expla}`);
+    }
+    if(keyword == '')
+    alert(`Please enter your word`);
+
+} while (keyword != 'e');
