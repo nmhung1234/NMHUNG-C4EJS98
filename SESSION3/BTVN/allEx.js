@@ -51,58 +51,58 @@
 
 // ex4 ---- I dont know why my 'd' is disconnect
 
-    let items = ['Jeans', 'T-Shirt', 'Socks'];
-    let input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-    do {
-        if (input == 'c' || input == 'r' || input == 'u' || input == 'd')
-        {
-            switch (input) {
-                case 'r':
-                    {
-                        console.log("The current items are:");
-                        for (let i = 0; i < items.length; i++) {
-                            console.log(`${i + 1}. ${items[i]}`);
-                        }
-                        input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-                        break;
-                    }
-                case 'c':
-                    {
-                        let add = String(prompt("Enter the name of the item"));
-                        alert("Done");
-                        items.push(add);
-                        console.log([...items]);
-                        input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-                        break;
-                    }
-                case 'u':
-                    {
-                        let positionUpdate = Number(prompt("Enter your position you want to update"));
-                        let valueUpdate = String(prompt("Enter the name"));
-                        alert("Done");
-                        items[positionUpdate -1] = valueUpdate;
-                        console.log([...items]);
-                        input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-                        break;
-                    }
-                case 'd':
-                    {
-                        //cắt ra làm 2 phần k chứa phần từ cẩn xóa. Đẩy 2 phần đấy vào mảng temp. rồi gán tại temp bằng items ban đầu để loại bỏ phần tử cần xóa
-                        let poDel = Number(prompt("Enter the position you wan to delete"));
-                        alert("Done");
-                        items.splice(poDel -1, 1);
-                        console.log([...items]);
-                        input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
-                        break;
-                    }
-            }
+    // let items = ['Jeans', 'T-Shirt', 'Socks'];
+    // let input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    // do {
+    //     if (input == 'c' || input == 'r' || input == 'u' || input == 'd')
+    //     {
+    //         switch (input) {
+    //             case 'r':
+    //                 {
+    //                     console.log("The current items are:");
+    //                     for (let i = 0; i < items.length; i++) {
+    //                         console.log(`${i + 1}. ${items[i]}`);
+    //                     }
+    //                     input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    //                     break;
+    //                 }
+    //             case 'c':
+    //                 {
+    //                     let add = String(prompt("Enter the name of the item"));
+    //                     alert("Done");
+    //                     items.push(add);
+    //                     console.log([...items]);
+    //                     input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    //                     break;
+    //                 }
+    //             case 'u':
+    //                 {
+    //                     let positionUpdate = Number(prompt("Enter your position you want to update"));
+    //                     let valueUpdate = String(prompt("Enter the name"));
+    //                     alert("Done");
+    //                     items[positionUpdate -1] = valueUpdate;
+    //                     console.log([...items]);
+    //                     input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    //                     break;
+    //                 }
+    //             case 'd':
+    //                 {
+    //                     //cắt ra làm 2 phần k chứa phần từ cẩn xóa. Đẩy 2 phần đấy vào mảng temp. rồi gán tại temp bằng items ban đầu để loại bỏ phần tử cần xóa
+    //                     let poDel = Number(prompt("Enter the position you wan to delete"));
+    //                     alert("Done");
+    //                     items.splice(poDel -1, 1);
+    //                     console.log([...items]);
+    //                     input = String(prompt("Hi there, welcome to shop admin panel, what do you want (C,R,U,D)?"));
+    //                     break;
+    //                 }
+    //         }
 
-        } else {
-            alert("This command is not supported");
-            break;
-        }
+    //     } else {
+    //         alert("This command is not supported");
+    //         break;
+    //     }
 
-    } while (input)
+    // } while (input)
 
 
 
