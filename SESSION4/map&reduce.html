@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let rastangless = [
+  { w: 10, h: 5},
+  { w: 7, h: 4},
+  { w: 6, h: 8},
+  { w: 10, h: 2}
+];
+let s = rastangless.map(function(item){
+  return item.w*item.h
+});
+let c = rastangless.map(function(item){
+  return (item.w + item.h)*2
+});
+console.log(s);
+console.log(c);
+
+var order = [
+    {name: 'A', quantity: 2, unitprice: 100},
+    {name: 'B', quantity: 1, unitprice: 400},
+    {name: 'C', quantity: 5, unitprice: 15},
+];
+let sumproduct = order.map(function(items){
+    return items.quantity*items.unitprice;
+})
+let sumall = sumproduct.reduce(function(a,b){
+    return a+b;
+})
+console.log(sumall);
+    </script>
+</body>
+</html>

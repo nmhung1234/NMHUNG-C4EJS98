@@ -33,28 +33,28 @@ let products = [
     },
 ]
 // // 5.1
- for(let product of products)
- console.log(`---------------- \nName: ${product.name}\nPrices: ${product.price}`);
+for (let product of products)
+    console.log(`---------------- \nName: ${product.name}\nPrices: ${product.price}`);
 
 // //  5.2
 console.log('5.2');
- for(let i = 0; i< products.length; i++){
-    
-    console.log(`#${i+1}. ${products[i].name}\nPrices: ${products[i].price}`);
- }
+for (let i = 0; i < products.length; i++) {
+
+    console.log(`#${i + 1}. ${products[i].name}\nPrices: ${products[i].price}`);
+}
+
 let detailProduct = Number(prompt("Enter product position"));
 console.log(`----------------------
-Name: ${products[detailProduct -1].name}
-Brand: ${products[detailProduct -1].brand}
-Price: ${products[detailProduct -1].price}
-Color: ${products[detailProduct -1].color}
-Category: ${products[detailProduct -1].category}`);
+Name: ${products[detailProduct - 1].name}
+Brand: ${products[detailProduct - 1].brand}
+Price: ${products[detailProduct - 1].price}
+Color: ${products[detailProduct - 1].color}
+Category: ${products[detailProduct - 1].category}`);
 
 // // 5.3
 let categoryOutput = (prompt("Enter your category"));
-for(let i = 0; i< products.length; i++){
-    if(categoryOutput == products[i].category)
-    {
+for (let i = 0; i < products.length; i++) {
+    if (categoryOutput == products[i].category) {
         console.log('-------------');
         console.log('Name:', products[i].name);
         console.log('Price:', products[i].price);
@@ -63,33 +63,25 @@ for(let i = 0; i< products.length; i++){
 
 // 5.4
 
-for(let i = 0; i< products.length; i++)
-{
-    console.log(`#${i+1}. \nName: ${products[i].name}\nPrices: ${products[i].price}\nProvides: ${products[i].Providers}`);
+for (let i = 0; i < products.length; i++) {
+    console.log(`#${i + 1}. \nName: ${products[i].name}\nPrices: ${products[i].price}\nProvides: ${products[i].Providers}`);
 }
 
-//  // 5.5
+// 5.5
 
-//  let providesOutput = (prompt("Enter your provides"));
+let providesOutput = (prompt("Enter your provides"));
 
-// for(let i = 0; i< products.length; i++){
+for (let i = 0; i < products.length; i++) {
+    for (let j = 0; j < products[i]['Providers'].length; j++) {
+        if (providesOutput == products[i].Providers[j]) {
+            console.log('-------------');
+            console.log('Name:', products[i].name);
+            console.log('Price:', products[i].price);
+            console.log('Provides:', products[i].Providers[j]);
+        }
 
-//     if(providesOutput == products[i].providers)
-//     {
-//         console.log('-------------');
-//         console.log('Name:', products[i].name);
-//         console.log('Price:', products[i].price);
-//         console.log('Provides:', products[i].providers);
-//     }
-// }
+    }
 
+}
 
-
-// 5.5 search based on provider
-
-// let providesSearch = (prompt("Enter your provides"));
-// for(let i = 0; i< products.length; i++)
-// {
-    
-// }
 
