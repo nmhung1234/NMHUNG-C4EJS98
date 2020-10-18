@@ -1,0 +1,6 @@
+.item div span:first-child{
+font-size: 18px;
+}
+.item div span:nth-child(2){
+    font-style: italic;
+}
