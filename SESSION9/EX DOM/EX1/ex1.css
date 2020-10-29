@@ -1,0 +1,9 @@
+div{
+    width: 30px;
+    height: 30px;
+    background-color: bisque;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    border: 10px solid white;
+}
