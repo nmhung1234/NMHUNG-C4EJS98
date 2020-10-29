@@ -2,7 +2,7 @@ let countdown = document.getElementById("countdown");
 let settime = document.getElementById("settime").value;
 let btnstart = document.getElementById("btnstart");
 let btnstop = document.getElementById("btnstop");
-
+// let a=0;
 let timeinterval = setInterval(function(){
     if(settime > 0 ){
         settime --;
@@ -18,9 +18,8 @@ let timeinterval = setInterval(function(){
             countdown.innerText = "Time's Up";
         }
     }
-    
 },1000)
 
-btnstart.onclick() = function(){
+btnstart.onclick() = function(){ 
     timeinterval;
 }

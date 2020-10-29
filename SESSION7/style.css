@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: relative;
+    /* border: 5px solid black; */
+    width: 290px;
+}
+.bao{
+    width: 280px;
+    position: relative;
+}
+.bao .view{
+    width: 280px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.719);
+    position: absolute;
+    bottom: 4px;
+}
