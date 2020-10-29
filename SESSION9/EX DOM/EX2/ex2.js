@@ -2,7 +2,8 @@ let countdown = document.getElementById("countdown");
 let settime = document.getElementById("settime").value;
 let btnstart = document.getElementById("btnstart");
 let btnstop = document.getElementById("btnstop");
-// let a=0;
+
+
 let timeinterval = setInterval(function(){
     if(settime > 0 ){
         settime --;
@@ -23,3 +24,6 @@ let timeinterval = setInterval(function(){
 btnstart.onclick() = function(){ 
     timeinterval;
 }
+// let a = setInterval(function(){
+//     console.log('a')
+// },1000)
