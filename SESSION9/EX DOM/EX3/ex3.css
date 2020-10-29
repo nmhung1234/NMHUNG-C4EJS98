@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 100px;
+}
+#quote-author{
+    font-size: 13px;
+    text-align: right;
+}
+#quote-content{
+    text-align: right;
+}
