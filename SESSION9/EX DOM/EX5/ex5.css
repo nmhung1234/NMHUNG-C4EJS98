@@ -17,17 +17,21 @@
 #game-main{
     height: 330px;
     width: 200px;
+    /* padding: 3px; */
     border:  1px solid black;
     position: absolute;
     top: 20%;
     left: 40%;
+    overflow: hidden;
 }
 #timeline{
-    margin: 3px 3px;
-    height: 4px;
+    margin: 3px 1px;
+    height: 3px;
     width: auto;
-    background-color: chartreuse;
-    
+    background-color: rgb(67, 122, 11);
+    border-radius: 2px;
+    /* position: relative;
+     animation: test 10s alternate ; */
 }
 #score{
     text-align: right;
@@ -53,4 +57,14 @@
     display: flex;
     justify-content: space-around;
     
+}
+
+@keyframes test{
+    from {
+        right:0px;
+
+    }
+    to {
+        right:200px;
+    }
 }

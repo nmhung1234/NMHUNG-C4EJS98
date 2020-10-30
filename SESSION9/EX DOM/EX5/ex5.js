@@ -42,8 +42,8 @@ let btnansweryes = document.getElementById("btnansweryes");
 let scoreShow = document.getElementById("score");
 
 // chọn câu hỏi ngẫu nhiên
-function num(){
-    let x =  Math.floor(Math.random()*quizzQuestion.length)
+function num() {
+    let x = Math.floor(Math.random() * quizzQuestion.length)
     return x
 }
 let numbquestion = num();
@@ -54,84 +54,83 @@ quizz.innerText = quizzQuestion[numbquestion].question;
 
 let scorecheckbox = document.getElementById("score-checkbox");
 let timercheckbox = document.getElementById("timer-checkbox");
+let timeline = document.getElementById("timeline")
 
-scorecheckbox.onclick = function(){
+
+timercheckbox.onclick = function () {
+
+    timeline.style.position = "relative";
+    timeline.style.animation = "test 10s alternate ";
+}
+
+scorecheckbox.onclick = function () {
     playGameHaveScore();
 }
-    playGameNoScore();
+playGameNoScore();
 
-function playGameHaveScore()
-{
+function playGameHaveScore() {
     let score = 0;
-btnanswerno.onclick = function(){
-    
-    if(quizzQuestion[numbquestion].answer == false)
-    {
-        score ++;
-        scoreShow.innerText = score;
-        num();
-        numbquestion = num();
-        quizz.innerText = quizzQuestion[numbquestion].question;
-    }
-    else
-    {
-        num();
-        numbquestion = num();
-        quizz.innerText = quizzQuestion[numbquestion].question;
-    }
+    btnanswerno.onclick = function () {
 
-}
-btnansweryes.onclick = function(){
-    
-    if(quizzQuestion[numbquestion].answer == true)
-    {
-        score ++;
-        scoreShow.innerText = score;
-        num();
-        numbquestion = num();
-        quizz.innerText = quizzQuestion[numbquestion].question;
+        if (quizzQuestion[numbquestion].answer == false) {
+            score++;
+            scoreShow.innerText = score;
+            num();
+            numbquestion = num();
+            quizz.innerText = quizzQuestion[numbquestion].question;
+        }
+        else {
+            num();
+            numbquestion = num();
+            quizz.innerText = quizzQuestion[numbquestion].question;
+        }
+
     }
-    else
-    {
-        num();
-        numbquestion = num();
-        quizz.innerText = quizzQuestion[numbquestion].question;
+    btnansweryes.onclick = function () {
+
+        if (quizzQuestion[numbquestion].answer == true) {
+            score++;
+            scoreShow.innerText = score;
+            num();
+            numbquestion = num();
+            quizz.innerText = quizzQuestion[numbquestion].question;
+        }
+        else {
+            num();
+            numbquestion = num();
+            quizz.innerText = quizzQuestion[numbquestion].question;
+        }
     }
-}
 }
 
-function playGameNoScore(){
+function playGameNoScore() {
     // let score = 0;
-    btnanswerno.onclick = function(){
-        
-        if(quizzQuestion[numbquestion].answer == false)
-        {
+    btnanswerno.onclick = function () {
+
+        if (quizzQuestion[numbquestion].answer == false) {
             // score ++;
             // scoreShow.innerText = score;
             num();
             numbquestion = num();
             quizz.innerText = quizzQuestion[numbquestion].question;
         }
-        else
-        {
+        else {
             num();
             numbquestion = num();
             quizz.innerText = quizzQuestion[numbquestion].question;
         }
-    
+
     }
-    btnansweryes.onclick = function(){
-        
-        if(quizzQuestion[numbquestion].answer == true)
-        {
+    btnansweryes.onclick = function () {
+
+        if (quizzQuestion[numbquestion].answer == true) {
             // score ++;
             // scoreShow.innerText = score;
             num();
             numbquestion = num();
             quizz.innerText = quizzQuestion[numbquestion].question;
         }
-        else
-        {
+        else {
             num();
             numbquestion = num();
             quizz.innerText = quizzQuestion[numbquestion].question;
