@@ -46,6 +46,7 @@ table.onclick = function (event) {
         // biến chứa phần tử cần update
         aw = event.target.parentElement.parentElement;
         console.dir(aw);
+        
         project.value = aw.children[0].outerText;
         task.value = aw.children[1].outerText;
         timespend.value = aw.children[2].outerText;
