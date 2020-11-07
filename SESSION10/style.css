@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+    letter-spacing: -0.4px;
+}
+header{
+    margin-bottom: 30px;
+}
+#status{
+    height: 500px;
+    width: 500px;
+    margin: 20px;
+    margin: 0 auto;
+    color: black;
+    overflow: auto;
+}
+.content{
+    padding: 20px;
+    /* border:  1px solid black; */
+    text-align: justify;
+}
+.titlei{
+    font-weight: 900;
+    text-align: justify;
+}
+header{
+    height: 200px;
+    /* border:  1px solid black; */
+    /* background-image: linear-gradient(rgb(175, 244, 247),white); */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://img.thuthuatphanmem.vn/uploads/2018/09/18/cover-facebook-dep-nhat_100830859.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 5px 10px;
+}
+nav{
+    display:  flex;
+    justify-content: space-between;
+}
+nav ul{
+    margin:0;
+    padding: 0;;
+}
+nav ul li{
+    display: inline;
+    text-decoration: none;
+    padding-right: 5px;
+    font-size: 8px;
+    font-weight: 900;
+    color: white;
+
+}
+.name-header{
+    text-align: center;
+    color: white;
+    
+
+}
+.name-header h2::after{
+    content: ' ';
+    display: block;
+    height:2px;
+    width: 40px;
+    background-color: white;
+    margin: 0 auto;
+}
+footer{
+    height: 150px;
+    border-top: 1px solid black;
+    text-align: center;
+}
+.footer-cont{
+    padding-top: 20px;
+}
+.footer-cont i{
+    font-size: 25px;
+    padding: 10px;
+}
+.footer-cont p{
+    font-size: 12px;
+    
+}
+
+
