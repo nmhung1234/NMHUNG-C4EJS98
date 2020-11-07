@@ -21,44 +21,63 @@ let Timesheet = [
     }
 ]
 
-
-let project = document.getElementById("project");
-let task = document.getElementById("task");
-let timespend = document.getElementById("timespend");
-let btnAdd = document.getElementById("btn");
-let table = document.getElementById("table");
+const project = document.getElementById("project");
+const task = document.getElementById("task");
+const timespend = document.getElementById("timespend");
+const btnAdd = document.getElementById("btn");
+const table = document.getElementById("table");
 
 for (let i = 0; i < Timesheet.length; i++) {
-    let trtd = `<tr><td>${Timesheet[i].project}</td><td>${Timesheet[i].task}</td><td>${Timesheet[i].timespend}</td><td><button class = "del">X</button><button class = "upd">U</button></td></tr>`
+    let trtd = `<tr><td>${Timesheet[i].project}</td><td>${Timesheet[i].task}</td>
+    <td>${Timesheet[i].timespend}</td>
+    <td><button  class="btn btn-danger del">X</button><button class="btn btn-success upd">U</button>
+    </td></tr>`
     table.innerHTML += trtd;
     console.log(trtd);
     console.log(i);
 }
 
-// tạo biến chwua phần tử cần update aw
-let aw;
+// tạo biến chứa phần tử cần update temp
+let temp;
 table.onclick = function (event) {
     if (event.target.classList.contains("del")) {
         console.log(event.target.classList.contains("del"))
         event.target.parentElement.parentElement.remove();
     }
+
     if (event.target.classList.contains("upd")) {
-        // biến chứa phần tử cần update
-        aw = event.target.parentElement.parentElement;
-        console.dir(aw);
+
+        btnAdd.innerHTML = "Update";
         
-        project.value = aw.children[0].outerText;
-        task.value = aw.children[1].outerText;
-        timespend.value = aw.children[2].outerText;
+        // biến chứa phần tử cần update
+        temp = event.target.parentElement.parentElement;
+        console.dir(temp);
+        
+        project.value = temp.children[0].outerText;
+        task.value = temp.children[1].outerText;
+        timespend.value = temp.children[2].outerText;
+
+        btnAdd.onclick = function () {
+            btnAdd.innerHTML = "Add";
+            temp.children[0].innerText = project.value;
+            temp.children[1].innerText = task.value;
+            temp.children[2].innerText = timespend.value;
+            console.log(temp);
+            
+            project.value = "";
+            task.value = "";
+            timespend.value = "";
+        }
     }
 }
 
 btnAdd.onclick = function () {
-
-    aw.children[0].innerText = project.value;
-    aw.children[1].innerText = task.value;
-    aw.children[2].innerText = timespend.value;
-    console.log(aw);
+ 
+    let trtd = `<tr><td>${project.value}</td><td>${task.value}</td>
+    <td>${timespend.value}</td>
+    <td><button  class="btn btn-danger del">X</button><button class="btn btn-success upd">U</button>
+    </td></tr>`
+    table.innerHTML += trtd;
 
     project.value = "";
     task.value = "";
