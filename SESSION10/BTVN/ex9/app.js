@@ -22,7 +22,7 @@ async function getData()
             } 
 
         })
-
+console.log(dataJson);
     let element;
     function printalbum(){
 
